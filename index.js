@@ -6,7 +6,7 @@ function nowServing(waitingArray){
   if (waitingArray.length === 0){
     return "There is nobody waiting to be served!"
   }else{
-    var nextUp = waitingArray.slice(1)
+    var nextUp = waitingArray.slice(-1)
     waitingArray.shift()
     return `Currently serving ${nextUp}`
   }
