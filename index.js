@@ -19,11 +19,11 @@ function currentLine(waitingArray){
     var retStr = ''
     for (let i = 0; i < waitingArray.length; i++){
       if (i === 0){
-        title.concat(`${i}. ${waitingArray[i]}`)
+        retStr = title.concat(`${i}. ${waitingArray[i]}`)
       }else{
-        title.concat(`, ${i}. ${waitingArray[i]}`)
+        retStr = retStr.concat(`, ${i}. ${waitingArray[i]}`)
       }
     }
-    return title
+    return retStr
   }
 }
