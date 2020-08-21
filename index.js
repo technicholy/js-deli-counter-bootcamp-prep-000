@@ -15,10 +15,11 @@ function currentLine(waitingArray){
   if (waitingArray.length === 0){
     return "The line is currently empty."
   }else{
-    var retStr = "The line is currently:"
+    var title = "The line is currently:"
+    var retStr = ''
     for (let i = 0; i < waitingArray.length; i++){
-      retStr.concat(`${i}. ${waitingArray[i]}`)
+      retStr.concat(retStr, `${i}. ${waitingArray[i]}`)
     }
-    return retStr
+    return title.concat(retStr)
   }
 }
