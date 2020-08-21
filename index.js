@@ -8,7 +8,7 @@ function nowServing(waitingArray){
   }else{
     var nextUp = waitingArray.slice(1)
     waitingArray.shift()
-    return nextUp
+    return `Currently serving ${nextUp}`
   }
 }
 function currentLine(waitingArray){
