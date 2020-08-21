@@ -8,7 +8,7 @@ function nowServing(waitingArray){
   }else{
     var nextUp = waitingArray[0]
     waitingArray.shift()
-    return `Currently serving ${nextUp}`
+    return `Currently serving ${nextUp}.`
   }
 }
 function currentLine(waitingArray){
@@ -18,7 +18,11 @@ function currentLine(waitingArray){
     var title = "The line is currently:"
     var retStr = ''
     for (let i = 0; i < waitingArray.length; i++){
-      retStr.concat(retStr, `${i}. ${waitingArray[i]}`)
+      if (i === 0){
+        retStr.concat(`${i}. ${waitingArray[i]}`)
+      }else{
+        retStr.concat(`, ${i}. ${waitingArray[i]}`)
+      }
     }
     return title.concat(retStr)
   }
